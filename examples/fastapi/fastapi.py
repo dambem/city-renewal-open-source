@@ -8,7 +8,6 @@ from contextlib import asynccontextmanager
 
 MAIN_LOOP = None
 
-# Initialize FastAPI and SocketIO
 
 def kafka_reader():
     consumer = KafkaConsumerBuilder()
@@ -38,7 +37,7 @@ async def lifespan(app: FastAPI):
 
     yield
     print('Shutting down...')
-    
+
 app = FastAPI(lifespan=lifespan)
 sio = socketio.AsyncServer(
     async_mode="asgi",

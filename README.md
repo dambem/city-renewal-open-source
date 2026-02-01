@@ -62,9 +62,9 @@ kafka.send({'a':'b'})
 ```
 
 ### FastAPI 
-```
+FastAPI describes an initial set-up for socket.io & kafka producer. You should be able to connect and listen to a socket.io request at `/`.
 
-```
+Make sure to set-up appropriate cors middleware for your frontend. I used 5173 as mine.
 
 
 ## Authors & contributors
